@@ -10,9 +10,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { BylawsComponent } from './components/bylaws/bylaws.component';
 import { OfficersComponent } from './components/officers/officers.component';
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
-  {'path': '', 'redirectTo': '/contact', 'pathMatch': 'full'},
+  {'path': '', 'redirectTo': '/home', 'pathMatch': 'full'},
+  {'path': 'home', 'component': HomeComponent},
   {'path': 'contact', 'component': ContactComponent},
   {'path': 'bylaws', 'component': BylawsComponent},
   {'path': 'officers', 'component': OfficersComponent}
@@ -26,7 +28,8 @@ const routes: Routes = [
     ContactComponent,
     BylawsComponent,
     OfficersComponent,
-    PdfViewerComponent
+    PdfViewerComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
